@@ -1,19 +1,10 @@
 class Solution {
     public int solution(int n) {
         int answer = 0;
-        if(n % 2 == 1) {
-            answer++; // n 자신
-            for(int i = 1; i < n / 2 + 1; i++) {
-                if(this.getSum(i, n) == n){
-                    answer++;
-                }
-            }
-        } else {
-            answer++; // n 자신
-            for(int i = 1; i < n / 2 + 1; i++) {
-                if(this.getSum(i, n) == n){
-                    answer++;
-                }
+        answer++; // n 자신
+        for(int i = 1; i < n / 2 + 1; i++) {
+            if(this.getSum(i, n) == n){
+                answer++;
             }
         }
         return answer;
